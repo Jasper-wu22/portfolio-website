@@ -226,18 +226,13 @@ body {
     margin-top: 3rem;
 }
 
-.about-image .image-placeholder {
+.about-image .profile-photo {
     width: 300px;
     height: 300px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    object-fit: cover;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    font-weight: 600;
-    font-size: 1.25rem;
     box-shadow: var(--shadow-lg);
+    border: 4px solid var(--white);
 }
 
 .about-text h3 {
@@ -577,8 +572,9 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .about-image .image-placeholder {
+    .about-image .profile-photo {
         margin: 0 auto;
+        display: block;
     }
 
     .about-stats {
