@@ -168,14 +168,40 @@ app.get('/api/portfolio', (req, res) => {
         ],
         projects: [
             {
-                name: 'Wukong Education Calculator',
-                description: 'A financial management tool for Wukong Education. Features automated money calculations, data processing, and intuitive interface for educational financial tracking.',
-                tags: ['Finance Tool', 'Calculator'],
+                name: 'Geotechnical BIM Development',
+                grade: '8th Grade',
+                description: 'Advanced engineering software for geotechnical analysis including foundation design, support structure design, and comprehensive geotechnical calculations for construction projects.',
+                tags: ['BIM', 'Engineering', 'CAD'],
+                link: '#',
+                status: 'completed'
+            },
+            {
+                name: 'Wukong Salary Calculator',
+                grade: '8th Grade',
+                description: 'Financial management system for Wukong Education with automated salary calculations, payroll processing, and comprehensive financial tracking capabilities.',
+                tags: ['Finance', 'Automation'],
                 link: 'http://wukong.zyvior.com',
                 status: 'completed'
             },
             {
+                name: 'ACC Admin Assistant',
+                grade: '8th Grade',
+                description: 'Administrative automation tool designed to streamline workflow management and administrative tasks with intelligent assistance features.',
+                tags: ['Admin Tool', 'Productivity'],
+                link: '#',
+                status: 'completed'
+            },
+            {
+                name: 'dao3.fun Space Werewolf',
+                grade: '4th Grade',
+                description: 'Multiplayer space-themed social deduction game inspired by Among Us. My first major development project showcasing early programming skills and game design.',
+                tags: ['Game', 'Multiplayer'],
+                link: 'http://dao3.fun',
+                status: 'completed'
+            },
+            {
                 name: 'Arplox',
+                grade: '8th Grade',
                 description: 'A game development platform currently under construction. Creating tools and resources for game developers with modern web technologies and interactive features.',
                 tags: ['Game Dev', 'Platform'],
                 link: 'http://arplox.zyvior.com',
