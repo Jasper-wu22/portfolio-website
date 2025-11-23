@@ -104,6 +104,7 @@ const skillDetails = {
     programming: {
         icon: '{ }',
         title: 'Programming Languages',
+        images: ['images/geotechnical-bim.png', 'images/wukong-finance.png', 'images/space-werewolf.png'],
         sections: [
             {
                 title: 'JavaScript',
@@ -127,6 +128,7 @@ const skillDetails = {
     web: {
         icon: '</>',
         title: 'Web Development',
+        images: ['images/acc-admin.png', 'images/arplox.png'],
         sections: [
             {
                 title: 'Full-Stack Development',
@@ -150,6 +152,7 @@ const skillDetails = {
     tennis: {
         icon: '★',
         title: 'Tennis Achievements',
+        images: ['images/397c664f624995fe3b81c21c42024842.jpg', 'images/65793e3f214f0d43cf3ac1308b7c59b4.jpg', 'images/e5ddfdb49490fd5d16ec1554b52fccea.jpg', 'images/fb833294aece2736ae014acd4ff5ad82.jpg'],
         sections: [
             {
                 title: 'Yonex Sponsorship',
@@ -191,6 +194,15 @@ function openSkillModal(skillType) {
             <h2 class="modal-title">${skill.title}</h2>
         </div>
     `;
+    
+    // Add image gallery if images exist
+    if (skill.images && skill.images.length > 0) {
+        html += '<div class="modal-images">';
+        skill.images.forEach(img => {
+            html += `<img src="${img}" alt="${skill.title}" class="modal-image">`;
+        });
+        html += '</div>';
+    }
     
     skill.sections.forEach(section => {
         html += `

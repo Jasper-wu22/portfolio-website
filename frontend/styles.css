@@ -563,6 +563,28 @@ body {
     margin-bottom: 2rem;
 }
 
+.modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.modal-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.modal-image:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
 .modal-section h4 {
     font-size: 1.25rem;
     font-weight: 600;
