@@ -104,7 +104,6 @@ const skillDetails = {
     programming: {
         icon: '{ }',
         title: 'Programming Languages',
-        images: ['images/geotechnical-bim.png', 'images/space-werewolf.png', 'images/wukong-finance.png'],
         sections: [
             {
                 title: 'JavaScript',
