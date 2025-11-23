@@ -104,7 +104,7 @@ const skillDetails = {
     programming: {
         icon: '{ }',
         title: 'Programming Languages',
-        images: ['images/04cbdffd6f99c313f9c81a2c622a6eff.jpg', 'images/24615f4a35506c6d908895d389beb52f.jpg', 'images/2540b2bf4f5d0441a684f025b3153072.jpg'],
+        images: ['images/geotechnical-bim.png', 'images/space-werewolf.png', 'images/wukong-finance.png'],
         sections: [
             {
                 title: 'JavaScript',
@@ -128,7 +128,7 @@ const skillDetails = {
     web: {
         icon: '</>',
         title: 'Web Development',
-        images: ['images/3314ab0f15090f039cc07eaa87bfb721.jpg', 'images/39026592c5d452b7dd1c182d7366ada3.jpg', 'images/3c76c0b4d689df7e6a22ec36130422ae.jpg'],
+        images: ['images/wukong-finance.png', 'images/arplox.png', 'images/acc-admin.png'],
         sections: [
             {
                 title: 'Full-Stack Development',
