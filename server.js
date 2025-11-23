@@ -102,8 +102,9 @@ app.get('/api/portfolio', (req, res) => {
             full: 'Jasper Wu (Liuze Wu)'
         },
         age: 13,
-        title: 'Developer & National Tennis Champion',
+        title: 'Developer & National Tennis Champion | Yonex Sponsored Athlete',
         location: 'Toronto, Canada',
+        sponsorship: 'Yonex',
         about: {
             description: 'I\'m a 13-year-old developer and national tennis champion from Toronto, Canada. My passion lies in creating innovative software solutions using multiple programming languages while achieving excellence on the tennis court.',
             stats: {
@@ -156,8 +157,9 @@ app.get('/api/portfolio', (req, res) => {
             {
                 category: 'Tennis Achievements',
                 icon: '★',
-                description: 'National champion with multiple titles',
+                description: 'Yonex sponsored athlete & national champion',
                 items: [
+                    'Yonex Sponsored Athlete',
                     '2024 National Open A1000 Singles Champion',
                     '2024 National Open A1200 Doubles Champion',
                     '2020 Shanghai Games Team Gold Medal',
