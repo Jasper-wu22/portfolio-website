@@ -104,7 +104,7 @@ const skillDetails = {
     programming: {
         icon: '{ }',
         title: 'Programming Languages',
-        images: ['images/geotechnical-bim.png', 'images/wukong-finance.png', 'images/space-werewolf.png'],
+        images: ['images/04cbdffd6f99c313f9c81a2c622a6eff.jpg', 'images/24615f4a35506c6d908895d389beb52f.jpg', 'images/2540b2bf4f5d0441a684f025b3153072.jpg'],
         sections: [
             {
                 title: 'JavaScript',
@@ -128,7 +128,7 @@ const skillDetails = {
     web: {
         icon: '</>',
         title: 'Web Development',
-        images: ['images/acc-admin.png', 'images/arplox.png'],
+        images: ['images/3314ab0f15090f039cc07eaa87bfb721.jpg', 'images/39026592c5d452b7dd1c182d7366ada3.jpg', 'images/3c76c0b4d689df7e6a22ec36130422ae.jpg'],
         sections: [
             {
                 title: 'Full-Stack Development',
@@ -152,7 +152,17 @@ const skillDetails = {
     tennis: {
         icon: '★',
         title: 'Tennis Achievements',
-        images: ['images/397c664f624995fe3b81c21c42024842.jpg', 'images/65793e3f214f0d43cf3ac1308b7c59b4.jpg', 'images/e5ddfdb49490fd5d16ec1554b52fccea.jpg', 'images/fb833294aece2736ae014acd4ff5ad82.jpg'],
+        images: [
+            'images/397c664f624995fe3b81c21c42024842.jpg',
+            'images/3d9cb6ee27d199c1b5591708059dd161.jpg',
+            'images/65793e3f214f0d43cf3ac1308b7c59b4.jpg',
+            'images/838f82db13506716614906f324e808da.jpg',
+            'images/9267c5dedaeca330cc6266246990f82a.jpg',
+            'images/a43ee3e809e64008f70a648fbf576d2e.jpg',
+            'images/e5ddfdb49490fd5d16ec1554b52fccea.jpg',
+            'images/ef40ce03d29b7b22b5ac1ea315b4dd5c.jpg',
+            'images/fb833294aece2736ae014acd4ff5ad82.jpg'
+        ],
         sections: [
             {
                 title: 'Yonex Sponsorship',
