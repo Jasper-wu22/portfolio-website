@@ -102,16 +102,34 @@ app.get('/api/portfolio', (req, res) => {
             full: 'Jasper Wu (Liuze Wu)'
         },
         age: 13,
-        title: 'Developer & Competitive Tennis Player',
+        title: 'Developer & National Tennis Champion',
         location: 'Toronto, Canada',
         about: {
-            description: 'I\'m a 13-year-old developer and competitive tennis player from Toronto, Canada. My passion lies in creating innovative software solutions using multiple programming languages while maintaining excellence on the tennis court with a UTR 8 rating.',
+            description: 'I\'m a 13-year-old developer and national tennis champion from Toronto, Canada. My passion lies in creating innovative software solutions using multiple programming languages while achieving excellence on the tennis court.',
             stats: {
                 programmingLanguages: 4,
                 tennisRating: 'UTR 8',
-                passion: 'Infinite'
+                nationalTitles: 3
             }
         },
+        tennisAchievements: [
+            {
+                year: 2024,
+                title: 'National Tennis Open A1000 Baoshan Singles Champion'
+            },
+            {
+                year: 2024,
+                title: 'National Tennis Open A1200 Jiaxing Doubles Champion'
+            },
+            {
+                year: 2020,
+                title: 'Shanghai 10th Games Team Gold Medal'
+            },
+            {
+                year: 2020,
+                title: 'Shanghai 10th Games Doubles Silver Medal'
+            }
+        ],
         skills: [
             {
                 category: 'Programming Languages',
@@ -136,14 +154,15 @@ app.get('/api/portfolio', (req, res) => {
                 ]
             },
             {
-                category: 'Tennis Excellence',
+                category: 'Tennis Achievements',
                 icon: '★',
-                description: 'Competitive player with proven tournament success',
+                description: 'National champion with multiple titles',
                 items: [
-                    'UTR 8 Rating',
-                    'Tournament Winner (Toronto)',
-                    'Strategic Game Analysis',
-                    'Mental Toughness'
+                    '2024 National Open A1000 Singles Champion',
+                    '2024 National Open A1200 Doubles Champion',
+                    '2020 Shanghai Games Team Gold Medal',
+                    '2020 Shanghai Games Doubles Silver Medal',
+                    'UTR 8 Rating'
                 ]
             }
         ],
