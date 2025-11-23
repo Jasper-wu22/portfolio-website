@@ -99,6 +99,134 @@ contactCards.forEach(card => {
     });
 });
 
+// Skill Modal Functions
+const skillDetails = {
+    programming: {
+        icon: '{ }',
+        title: 'Programming Languages',
+        sections: [
+            {
+                title: 'JavaScript',
+                content: 'Proficient in full-stack JavaScript development including Node.js backend with Express framework, modern frontend frameworks, asynchronous programming, and ES6+ features. Built multiple production applications including financial calculators and web platforms.'
+            },
+            {
+                title: 'Python',
+                content: 'Experienced in Python for application development, scripting, automation, and data processing. Created various tools and utilities for practical problem-solving and system automation.'
+            },
+            {
+                title: 'Java',
+                content: 'Strong foundation in object-oriented programming with Java. Developed complex applications including game projects and enterprise-level tools. Understanding of design patterns and best practices.'
+            },
+            {
+                title: 'C#',
+                content: 'Proficient in C# for application development, including desktop applications and software tools. Experience with .NET framework and modern C# features.'
+            }
+        ],
+        experience: 'Started programming in 4th grade and have been continuously developing skills across multiple languages. Created real-world applications serving actual users.'
+    },
+    web: {
+        icon: '</>',
+        title: 'Web Development',
+        sections: [
+            {
+                title: 'Full-Stack Development',
+                content: 'Complete expertise in building end-to-end web applications from database design to user interface. Experienced with modern development workflows, version control (Git), and deployment processes.'
+            },
+            {
+                title: 'RESTful API Design',
+                content: 'Skilled in designing and implementing RESTful APIs with proper routing, authentication, error handling, and documentation. Built APIs serving multiple frontend applications.'
+            },
+            {
+                title: 'Responsive Web Design',
+                content: 'Expert in creating mobile-first, responsive websites that work flawlessly across all devices. Proficient in CSS Grid, Flexbox, and modern layout techniques.'
+            },
+            {
+                title: 'Database Management',
+                content: 'Experience with database design, queries, and optimization. Understanding of data modeling, relationships, and efficient data storage solutions.'
+            }
+        ],
+        experience: 'Built and deployed multiple live websites including wukong.zyvior.com and arplox.zyvior.com. Projects serve real users and handle production workloads.'
+    },
+    tennis: {
+        icon: '★',
+        title: 'Tennis Achievements',
+        sections: [
+            {
+                title: 'Yonex Sponsorship',
+                content: 'Proud to be sponsored by Yonex, one of the world\'s leading tennis equipment manufacturers. This sponsorship recognizes my achievements and potential in competitive tennis.'
+            },
+            {
+                title: '2024 National Tennis Open A1000 - Singles Champion (Baoshan)',
+                content: 'Won the singles championship at the prestigious A1000 level national tournament in Baoshan, competing against top players from across the country. This victory demonstrates my competitive excellence and strategic gameplay.'
+            },
+            {
+                title: '2024 National Tennis Open A1200 - Doubles Champion (Jiaxing)',
+                content: 'Secured the doubles championship at the A1200 level national tournament in Jiaxing, showcasing strong teamwork, communication, and partnership skills on the court.'
+            },
+            {
+                title: '2020 Shanghai 10th Games - Team Gold Medal',
+                content: 'Contributed to team victory at the Shanghai 10th Games, earning a gold medal in team competition. Demonstrated ability to perform under pressure in high-stakes team environments.'
+            },
+            {
+                title: '2020 Shanghai 10th Games - Doubles Silver Medal',
+                content: 'Achieved silver medal in doubles competition at the Shanghai 10th Games, showing consistent high-level performance in both individual and team events.'
+            },
+            {
+                title: 'UTR 8 Rating',
+                content: 'Maintains a Universal Tennis Rating (UTR) of 8, placing among competitive junior players. UTR is a globally recognized rating system that accurately measures tennis skill level.'
+            }
+        ],
+        experience: 'Competitive tennis player since childhood with numerous tournament victories across Canada and China. Training regimen includes technical skill development, strategic game planning, physical conditioning, and mental toughness training.'
+    }
+};
+
+function openSkillModal(skillType) {
+    const modal = document.getElementById('skillModal');
+    const modalBody = document.getElementById('modalBody');
+    const skill = skillDetails[skillType];
+    
+    let html = `
+        <div class="modal-header">
+            <div class="modal-icon">${skill.icon}</div>
+            <h2 class="modal-title">${skill.title}</h2>
+        </div>
+    `;
+    
+    skill.sections.forEach(section => {
+        html += `
+            <div class="modal-section">
+                <h4>${section.title}</h4>
+                <p>${section.content}</p>
+            </div>
+        `;
+    });
+    
+    html += `
+        <div class="modal-section">
+            <h4>Experience & Background</h4>
+            <p>${skill.experience}</p>
+        </div>
+    `;
+    
+    modalBody.innerHTML = html;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeSkillModal() {
+    const modal = document.getElementById('skillModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+    const modal = document.getElementById('skillModal');
+    if (event.target === modal) {
+        closeSkillModal();
+    }
+}
+
 // Add animation to skill cards and project cards on hover
 const cards = document.querySelectorAll('.skill-card, .project-card, .stat-item');
 cards.forEach(card => {

@@ -105,7 +105,7 @@
             <h2 class="section-title">My Skills</h2>
             <p class="section-subtitle">Technologies and tools I work with</p>
             <div class="skills-grid">
-                <div class="skill-card">
+                <div class="skill-card" onclick="openSkillModal('programming')">
                     <div class="skill-icon">{ }</div>
                     <h3>Programming Languages</h3>
                     <p>Building robust solutions with multiple technologies</p>
@@ -115,8 +115,9 @@
                         <li>Java (Object-Oriented Programming)</li>
                         <li>C# (Application Development)</li>
                     </ul>
+                    <div class="click-hint">Click for details →</div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" onclick="openSkillModal('web')">
                     <div class="skill-icon">&lt;/&gt;</div>
                     <h3>Web Development</h3>
                     <p>Creating modern, full-stack applications</p>
@@ -126,8 +127,9 @@
                         <li>Responsive Web Design</li>
                         <li>Database Management</li>
                     </ul>
+                    <div class="click-hint">Click for details →</div>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" onclick="openSkillModal('tennis')">
                     <div class="skill-icon">★</div>
                     <h3>Tennis Achievements</h3>
                     <p>Yonex sponsored athlete & national champion</p>
@@ -139,6 +141,7 @@
                         <li>2020 Shanghai Games Doubles Silver Medal</li>
                         <li>UTR 8 Rating</li>
                     </ul>
+                    <div class="click-hint">Click for details →</div>
                 </div>
             </div>
         </div>
@@ -252,6 +255,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Skill Detail Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSkillModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
 
     <!-- Photo Gallery Section -->
     <section id="gallery" class="gallery">
