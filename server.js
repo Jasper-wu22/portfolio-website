@@ -170,14 +170,6 @@ app.get('/api/portfolio', (req, res) => {
         ],
         projects: [
             {
-                name: 'Geotechnical BIM Development',
-                grade: '8th Grade',
-                description: 'Advanced engineering software for geotechnical analysis including foundation design, support structure design, and comprehensive geotechnical calculations for construction projects.',
-                tags: ['BIM', 'Engineering', 'CAD'],
-                link: '#',
-                status: 'completed'
-            },
-            {
                 name: 'Wukong Salary Calculator',
                 grade: '8th Grade',
                 description: 'Financial management system for Wukong Education with automated salary calculations, payroll processing, and comprehensive financial tracking capabilities.',
