@@ -106,46 +106,50 @@ const skillDetails = {
         title: 'Programming Languages',
         sections: [
             {
-                title: 'JavaScript',
-                content: 'Proficient in full-stack JavaScript development including Node.js backend with Express framework, modern frontend frameworks, asynchronous programming, and ES6+ features. Built multiple production applications including financial calculators and web platforms.'
+                title: 'JavaScript - Full-Stack Mastery',
+                content: 'Expert in modern JavaScript (ES6+) for both frontend and backend development. On the backend, I\'ve built robust Node.js applications using Express.js framework, implementing RESTful APIs with proper routing, middleware, authentication, and error handling. Frontend expertise includes DOM manipulation, event handling, async/await patterns, Promises, and fetch API for seamless client-server communication. I understand JavaScript\'s event loop, closures, prototypal inheritance, and functional programming concepts. Projects include: Wukong Education salary calculator (live at wukong.zyvior.com), Arplox game development platform (arplox.zyvior.com), and this portfolio website with interactive features.'
             },
             {
-                title: 'Python',
-                content: 'Experienced in Python for application development, scripting, automation, and data processing. Created various tools and utilities for practical problem-solving and system automation.'
+                title: 'Python - Versatile Development',
+                content: 'Comprehensive Python knowledge spanning application development, scripting, automation, and data processing. Skilled in using Python for creating practical utilities, automating repetitive tasks, file I/O operations, data structure manipulation (lists, dictionaries, sets), and object-oriented programming. Experience with Python\'s standard library, exception handling, and writing clean, maintainable code following PEP 8 style guidelines. Built the Conversation Saver MCP Tool for managing and saving conversations, demonstrating practical application of Python for real-world utility development. Comfortable with virtual environments, package management with pip, and writing modular, reusable code.'
             },
             {
-                title: 'Java',
-                content: 'Strong foundation in object-oriented programming with Java. Developed complex applications including game projects and enterprise-level tools. Understanding of design patterns and best practices.'
+                title: 'Java - Object-Oriented Excellence',
+                content: 'Strong foundation in Java and object-oriented programming principles (encapsulation, inheritance, polymorphism, abstraction). Developed complex applications including the Space Werewolf multiplayer game (dao3.fun) in 4th grade, showcasing early understanding of game logic, state management, and user interaction. Proficient in Java syntax, data structures (ArrayList, HashMap), exception handling, file I/O, and multi-threading concepts. Understanding of design patterns (Singleton, Factory, Observer) and their practical applications. Experience with both console and graphical applications, demonstrating versatility in Java development.'
             },
             {
-                title: 'C#',
-                content: 'Proficient in C# for application development, including desktop applications and software tools. Experience with .NET framework and modern C# features.'
+                title: 'C# - Professional Application Development',
+                content: 'Proficient in C# for building professional-grade applications, particularly in engineering and business contexts. Developed the Geotechnical BIM software featuring foundation design calculations, support structure analysis, and comprehensive geotechnical engineering computations. Strong understanding of C# syntax, .NET framework, Windows Forms or WPF for GUI applications, LINQ for data queries, async/await for asynchronous programming, and proper memory management. Experience with event-driven programming, delegates, and creating maintainable, scalable application architectures. Built the ACC Admin Assistant tool for workflow automation, demonstrating practical business application development skills.'
             }
         ],
-        experience: 'Started programming in 4th grade and have been continuously developing skills across multiple languages. Created real-world applications serving actual users.'
+        experience: 'Started programming journey in 4th grade with the dao3.fun Space Werewolf game project, demonstrating early aptitude for software development. Over the years, progressed from basic game development to creating professional-grade applications serving real users in production environments. By 8th grade, developed enterprise-level software including financial management systems (Wukong Education Calculator), engineering tools (Geotechnical BIM with complex calculations), and administrative platforms (ACC Admin Assistant). Self-taught and continuously learning, with hands-on experience deploying and maintaining live web applications. Strong problem-solving abilities, debugging skills, and understanding of software development lifecycle from concept to deployment.'
     },
     web: {
         icon: '</>',
         title: 'Web Development',
         sections: [
             {
-                title: 'Full-Stack Development',
-                content: 'Complete expertise in building end-to-end web applications from database design to user interface. Experienced with modern development workflows, version control (Git), and deployment processes.'
+                title: 'Full-Stack Development - Complete Web Solutions',
+                content: 'Comprehensive expertise in building complete web applications from scratch. Backend development includes Node.js with Express.js for server-side logic, API development, middleware implementation, session management, and authentication systems. Frontend development covers HTML5 semantic markup, modern CSS3 (including animations, transitions, and transforms), and vanilla JavaScript for interactive features. Understanding of the entire request-response cycle, client-server architecture, state management, and data flow. Built production applications with proper separation of concerns, modular code structure, and scalable architecture. Experience with development tools including npm/package managers, Git version control (GitHub), and deployment platforms. Created multiple live applications serving real users with reliable performance and professional user experiences.'
             },
             {
-                title: 'RESTful API Design',
-                content: 'Skilled in designing and implementing RESTful APIs with proper routing, authentication, error handling, and documentation. Built APIs serving multiple frontend applications.'
+                title: 'RESTful API Design & Implementation',
+                content: 'Expert in designing and implementing RESTful APIs following industry best practices. Built APIs with proper HTTP methods (GET, POST, PUT, DELETE), status codes, error handling, and response formatting. Implemented features including input validation, data sanitization, CORS configuration for cross-origin requests, and comprehensive error handling with meaningful error messages. Experience with API endpoint organization, route parameterization, query parameters, and request body parsing. Built contact form API with email integration (Nodemailer), portfolio data endpoints, and health check endpoints. Understanding of API security principles, authentication mechanisms, and protecting sensitive endpoints. APIs serve multiple frontend applications with reliable performance and proper documentation.'
             },
             {
-                title: 'Responsive Web Design',
-                content: 'Expert in creating mobile-first, responsive websites that work flawlessly across all devices. Proficient in CSS Grid, Flexbox, and modern layout techniques.'
+                title: 'Responsive Web Design - Mobile-First Approach',
+                content: 'Expert in creating responsive, mobile-first websites that provide optimal user experience across all devices (desktop, tablet, mobile). Proficient in modern CSS layout techniques including CSS Grid for two-dimensional layouts, Flexbox for one-dimensional layouts, and media queries for breakpoint management. Understanding of responsive design principles: fluid grids, flexible images, viewport meta tags, and relative units (rem, em, %, vw/vh). Built websites with smooth animations using CSS transitions and transforms, hover effects for interactivity, and touch-friendly interfaces for mobile devices. Experience with cross-browser compatibility, performance optimization, and accessibility best practices. Created navigation systems that adapt to different screen sizes, including mobile hamburger menus and responsive navigation bars.'
             },
             {
-                title: 'Database Management',
-                content: 'Experience with database design, queries, and optimization. Understanding of data modeling, relationships, and efficient data storage solutions.'
+                title: 'Database Management & Data Handling',
+                content: 'Experience with database design, data modeling, and efficient data storage solutions. Understanding of relational database concepts including tables, relationships (one-to-many, many-to-many), primary/foreign keys, and normalization. Skilled in writing queries for data retrieval, insertion, updates, and deletion. Experience with JSON data structures for API responses and configuration. Built applications requiring complex data handling including the Wukong Education salary calculator with financial data processing, geotechnical BIM software with engineering calculation storage, and admin systems with user data management. Understanding of data validation, sanitization for security, and efficient data retrieval patterns.'
+            },
+            {
+                title: 'Modern Development Workflow',
+                content: 'Proficient in professional development workflows and tools. Expert with Git version control for code management, branching strategies, commit best practices, and collaborative development through GitHub. Experience with npm for package management, dependency handling, and script automation. Understanding of project structure organization, environment variables for configuration, and deployment processes. Built this portfolio with proper .gitignore configuration, README documentation, and organized file structure. Familiar with debugging techniques, browser developer tools, server logs analysis, and systematic problem-solving approaches.'
             }
         ],
-        experience: 'Built and deployed multiple live websites including wukong.zyvior.com and arplox.zyvior.com. Projects serve real users and handle production workloads.'
+        experience: 'Built and deployed multiple production websites serving real users. Live projects include wukong.zyvior.com (Wukong Education salary calculator with complex financial logic), arplox.zyvior.com (game development platform), and this portfolio website (portfolio-website on GitHub). Experience spans the complete development lifecycle from initial planning and design to deployment and maintenance. All projects feature responsive design, professional UI/UX, working APIs, and are hosted on custom domains. Demonstrated ability to translate user requirements into functional, scalable web applications. Comfortable working independently and managing entire projects from conception to production deployment.'
     },
     tennis: {
         icon: '★',
