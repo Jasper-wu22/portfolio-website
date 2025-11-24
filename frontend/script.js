@@ -127,7 +127,6 @@ const skillDetails = {
     web: {
         icon: '</>',
         title: 'Web Development',
-        images: ['images/wukong-finance.png', 'images/arplox.png', 'images/acc-admin.png'],
         sections: [
             {
                 title: 'Full-Stack Development',
