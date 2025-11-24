@@ -96,10 +96,10 @@ app.post('/api/contact', async (req, res) => {
 app.get('/api/portfolio', (req, res) => {
     const portfolioData = {
         name: {
-            english: 'Jasper Wu',
+            english: 'Liuze Wu',
             chinese: 'Liuze Wu',
             chineseCharacters: '吴刘泽',
-            full: 'Jasper Wu (Liuze Wu)'
+            full: 'Liuze Wu'
         },
         age: 13,
         title: 'Developer & National Tennis Champion | Yonex Sponsored Athlete',
