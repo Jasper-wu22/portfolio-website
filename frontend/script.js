@@ -245,10 +245,224 @@ function closeSkillModal() {
 
 // Close modal when clicking outside
 window.onclick = function(event) {
-    const modal = document.getElementById('skillModal');
-    if (event.target === modal) {
+    const skillModal = document.getElementById('skillModal');
+    const projectModal = document.getElementById('projectModal');
+    if (event.target === skillModal) {
         closeSkillModal();
     }
+    if (event.target === projectModal) {
+        closeProjectModal();
+    }
+}
+
+// Project Details
+const projectDetails = {
+    wukong: {
+        title: 'Wukong Education Salary Calculator',
+        grade: '8th Grade',
+        status: 'Live in Production',
+        url: 'http://wukong.zyvior.com',
+        technologies: ['JavaScript', 'Node.js', 'Express', 'HTML/CSS'],
+        overview: 'A comprehensive financial management system built for Wukong Education to handle complex salary calculations and payroll processing. This production application serves real users and handles sensitive financial data with accuracy and reliability.',
+        features: [
+            {
+                title: 'Automated Salary Calculations',
+                description: 'Implemented complex algorithms to calculate teacher salaries based on hours worked, class types, student attendance, and various bonus structures. The system handles multiple payment tiers and automatically applies the correct rates.'
+            },
+            {
+                title: 'Payroll Processing System',
+                description: 'Built a complete payroll processing workflow that tracks employee hours, calculates deductions, generates pay stubs, and produces detailed financial reports for accounting purposes.'
+            },
+            {
+                title: 'Financial Data Management',
+                description: 'Developed robust data handling for storing and retrieving financial records, transaction history, and employee payment information with proper validation and error handling.'
+            },
+            {
+                title: 'User-Friendly Interface',
+                description: 'Designed an intuitive web interface that allows administrators to easily input data, review calculations, and generate reports without technical knowledge required.'
+            }
+        ],
+        challenges: 'Working with real financial data required extreme attention to accuracy and detail. I had to account for edge cases, implement comprehensive validation, and ensure calculations were always correct to the cent. Security and data privacy were also critical considerations.',
+        impact: 'This system is actively used by Wukong Education to process payroll for multiple teachers. It has significantly reduced manual calculation time and eliminated human error in salary computations, saving hours of administrative work each pay period.',
+        learning: 'This project taught me the importance of precision in financial software, proper error handling, and building user-friendly interfaces for non-technical users. I learned to write defensive code that validates all inputs and handles edge cases gracefully.'
+    },
+    acc: {
+        title: 'ACC Admin Assistant',
+        grade: '8th Grade',
+        status: 'Enterprise Tool',
+        technologies: ['C#', '.NET Framework', 'Windows Forms'],
+        overview: 'An administrative automation tool designed to streamline workflow management and reduce repetitive tasks. Built as a desktop application to help administrators manage daily operations more efficiently.',
+        features: [
+            {
+                title: 'Workflow Automation',
+                description: 'Automated repetitive administrative tasks that previously required manual data entry and processing. The system can handle batch operations, file organization, and routine data management tasks with a single click.'
+            },
+            {
+                title: 'Task Management System',
+                description: 'Implemented a task tracking system that helps administrators organize, prioritize, and complete their daily responsibilities. Includes reminders, deadlines, and progress tracking.'
+            },
+            {
+                title: 'Data Processing Tools',
+                description: 'Created utilities for processing and transforming data between different formats, generating reports, and performing calculations on administrative data sets.'
+            },
+            {
+                title: 'User-Friendly Desktop Interface',
+                description: 'Designed a Windows desktop application with an intuitive GUI that makes complex operations accessible through simple button clicks and form inputs.'
+            }
+        ],
+        challenges: 'Designing an application that could handle diverse administrative needs while remaining simple to use was challenging. I had to balance powerful features with ease of use, ensuring the tool enhanced productivity rather than adding complexity.',
+        impact: 'The ACC Admin Assistant has streamlined administrative workflows, reducing the time spent on routine tasks and allowing staff to focus on more important responsibilities. It demonstrates practical problem-solving through software development.',
+        learning: 'This project deepened my understanding of C# and desktop application development. I learned about event-driven programming, file I/O operations, and creating professional software tools for business use.'
+    },
+    spacewolf: {
+        title: 'dao3.fun Space Werewolf',
+        grade: '4th Grade - My First Major Project',
+        status: 'Live & Playable',
+        url: 'http://dao3.fun',
+        technologies: ['Java', 'Game Development', 'Multiplayer Logic'],
+        overview: 'A multiplayer social deduction game inspired by Among Us, built when I was in 4th grade. This was my first significant programming project that introduced me to game development, multiplayer logic, and user interaction design.',
+        features: [
+            {
+                title: 'Multiplayer Game Mechanics',
+                description: 'Implemented core multiplayer functionality allowing multiple players to join the same game session. The game supports simultaneous players with real-time interactions and game state synchronization.'
+            },
+            {
+                title: 'Social Deduction Gameplay',
+                description: 'Created the classic social deduction game loop where players must identify impostors among them through discussion, observation, and voting. Includes role assignment, task systems, and voting mechanisms.'
+            },
+            {
+                title: 'Game State Management',
+                description: 'Developed systems to track game phases (preparation, play, discussion, voting), player states (alive, eliminated, impostor, crewmate), and game progression through different rounds.'
+            },
+            {
+                title: 'User Interface Design',
+                description: 'Designed intuitive game controls and visual feedback so players can easily understand game status, perform actions, and interact with other players.'
+            }
+        ],
+        challenges: 'As my first major project in 4th grade, everything was a learning experience. Understanding multiplayer logic, managing game states, and debugging complex interactions were all new challenges. I learned through trial and error and persistence.',
+        impact: 'This project sparked my passion for programming and showed me that I could create real, playable software that people enjoy. It proved that age is just a number when it comes to coding ability and gave me the confidence to pursue more ambitious projects.',
+        learning: 'Building this game taught me fundamental programming concepts: loops, conditionals, variables, functions, and object-oriented thinking. More importantly, it taught me problem-solving, debugging, and the satisfaction of creating something from nothing. This project set the foundation for my programming journey.'
+    },
+    arplox: {
+        title: 'Arplox Game Development Platform',
+        grade: '8th Grade',
+        status: 'In Active Development',
+        url: 'http://arplox.zyvior.com',
+        technologies: ['JavaScript', 'Node.js', 'Web Technologies', 'Game Dev Tools'],
+        overview: 'An ambitious game development platform currently under construction. Arplox aims to provide tools and resources for game developers to create, test, and share their games using modern web technologies.',
+        features: [
+            {
+                title: 'Game Development Tools',
+                description: 'Building a suite of tools that help developers create browser-based games more easily. This includes utilities for game logic, asset management, and testing frameworks.'
+            },
+            {
+                title: 'Web-Based Game Engine',
+                description: 'Developing a lightweight game engine that runs in the browser, allowing developers to create games using JavaScript with simplified APIs for common game development tasks.'
+            },
+            {
+                title: 'Resource Library',
+                description: 'Creating a collection of reusable code snippets, templates, and examples that game developers can use as starting points or reference for their projects.'
+            },
+            {
+                title: 'Developer Platform',
+                description: 'Building the infrastructure for developers to host, share, and showcase their games created with Arplox tools.'
+            }
+        ],
+        challenges: 'Building a platform for other developers is complex - it needs to be powerful enough for advanced users while remaining accessible for beginners. Balancing features, performance, and ease of use is an ongoing challenge. Additionally, creating good documentation and examples requires significant effort.',
+        currentProgress: 'The core architecture is in place and basic game development tools are functional. Currently working on refining the developer experience, adding more features, and creating comprehensive documentation. The platform is live at arplox.zyvior.com for preview and testing.',
+        futureGoals: 'Planning to add collaborative features, a community showcase, more advanced game development tools, and tutorials for aspiring game developers. The goal is to make game development accessible to students and beginners while providing power tools for experienced developers.',
+        learning: 'This ongoing project is teaching me about platform design, API development, user experience, and building software for other developers. It\'s also improving my skills in project management, long-term planning, and iterative development.'
+    }
+};
+
+function openProjectModal(projectType) {
+    const modal = document.getElementById('projectModal');
+    const modalBody = document.getElementById('projectModalBody');
+    const project = projectDetails[projectType];
+    
+    let html = `
+        <div class="modal-header">
+            <h2 class="modal-title">${project.title}</h2>
+        </div>
+        <div class="modal-section">
+            <p><strong>Grade:</strong> ${project.grade}</p>
+            <p><strong>Status:</strong> ${project.status}</p>
+            ${project.url ? `<p><strong>Live URL:</strong> <a href="${project.url}" target="_blank">${project.url}</a></p>` : ''}
+            <p><strong>Technologies:</strong> ${project.technologies.join(', ')}</p>
+        </div>
+        <div class="modal-section">
+            <h4>Project Overview</h4>
+            <p>${project.overview}</p>
+        </div>
+    `;
+    
+    if (project.features) {
+        html += '<div class="modal-section"><h4>Key Features & Implementation</h4>';
+        project.features.forEach(feature => {
+            html += `
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="color: var(--primary-color);">${feature.title}</strong>
+                    <p style="margin-top: 0.5rem;">${feature.description}</p>
+                </div>
+            `;
+        });
+        html += '</div>';
+    }
+    
+    if (project.challenges) {
+        html += `
+            <div class="modal-section">
+                <h4>Technical Challenges</h4>
+                <p>${project.challenges}</p>
+            </div>
+        `;
+    }
+    
+    if (project.impact) {
+        html += `
+            <div class="modal-section">
+                <h4>Impact & Results</h4>
+                <p>${project.impact}</p>
+            </div>
+        `;
+    }
+    
+    if (project.currentProgress) {
+        html += `
+            <div class="modal-section">
+                <h4>Current Progress</h4>
+                <p>${project.currentProgress}</p>
+            </div>
+        `;
+    }
+    
+    if (project.futureGoals) {
+        html += `
+            <div class="modal-section">
+                <h4>Future Goals</h4>
+                <p>${project.futureGoals}</p>
+            </div>
+        `;
+    }
+    
+    if (project.learning) {
+        html += `
+            <div class="modal-section">
+                <h4>What I Learned</h4>
+                <p>${project.learning}</p>
+            </div>
+        `;
+    }
+    
+    modalBody.innerHTML = html;
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeProjectModal() {
+    const modal = document.getElementById('projectModal');
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
 
 // Add animation to skill cards and project cards on hover

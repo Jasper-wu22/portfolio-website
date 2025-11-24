@@ -432,11 +432,16 @@ body {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    cursor: pointer;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+}
+
+.project-card .click-hint {
+    margin-top: 0.5rem;
 }
 
 .project-image img {
