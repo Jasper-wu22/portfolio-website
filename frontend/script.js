@@ -99,6 +99,37 @@ contactCards.forEach(card => {
     });
 });
 
+// Project card click handlers
+document.addEventListener('DOMContentLoaded', function() {
+    const projectCards = document.querySelectorAll('.project-card[data-project]');
+    projectCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const projectType = this.getAttribute('data-project');
+            if (projectType && typeof openProjectModal === 'function') {
+                openProjectModal(projectType);
+            }
+        });
+    });
+    
+    const skillCards = document.querySelectorAll('.skill-card[onclick]');
+    skillCards.forEach(card => {
+        const onclickAttr = card.getAttribute('onclick');
+        if (onclickAttr) {
+            card.addEventListener('click', function(e) {
+        e.preventDefault();
+                e.stopPropagation();
+                // Extract function call from onclick attribute
+                const match = onclickAttr.match(/openSkillModal\('(\w+)'\)/);
+                if (match && typeof openSkillModal === 'function') {
+                    openSkillModal(match[1]);
+                }
+            });
+        }
+    });
+});
+
 // Skill Modal Functions
 const skillDetails = {
     programming: {
