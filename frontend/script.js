@@ -149,7 +149,30 @@ const skillDetails = {
                 content: 'Proficient in professional development workflows and tools. Expert with Git version control for code management, branching strategies, commit best practices, and collaborative development through GitHub. Experience with npm for package management, dependency handling, and script automation. Understanding of project structure organization, environment variables for configuration, and deployment processes. Built this portfolio with proper .gitignore configuration, README documentation, and organized file structure. Familiar with debugging techniques, browser developer tools, server logs analysis, and systematic problem-solving approaches.'
             }
         ],
-        experience: 'Built and deployed multiple production websites serving real users. Live projects include wukong.zyvior.com (Wukong Education salary calculator with complex financial logic), arplox.zyvior.com (game development platform), and this portfolio website (portfolio-website on GitHub). Experience spans the complete development lifecycle from initial planning and design to deployment and maintenance. All projects feature responsive design, professional UI/UX, working APIs, and are hosted on custom domains. Demonstrated ability to translate user requirements into functional, scalable web applications. Comfortable working independently and managing entire projects from conception to production deployment.'
+        experience: 'Built and deployed multiple production websites serving real users. Live projects include wukong.zyvior.com (Wukong Education salary calculator with complex financial logic), arplox.zyvior.com (game development platform with AI agents), and this portfolio website (portfolio-website on GitHub). Experience spans the complete development lifecycle from initial planning and design to deployment and maintenance. All projects feature responsive design, professional UI/UX, working APIs, and are hosted on custom domains. Demonstrated ability to translate user requirements into functional, scalable web applications. Comfortable working independently and managing entire projects from conception to production deployment.'
+    },
+    ai: {
+        icon: '◆',
+        title: 'AI Agents & MCP Tools',
+        sections: [
+            {
+                title: 'AI Agent Development',
+                content: 'Building intelligent AI agents integrated into applications. Developed AI agents for Arplox game development platform that assist developers with code generation, debugging suggestions, and game design recommendations. These agents use natural language processing to understand developer intent and provide contextual assistance. Experience includes prompt engineering, agent behavior design, context management, and creating conversational interfaces that enhance user productivity.'
+            },
+            {
+                title: 'MCP (Model Context Protocol) Tools',
+                content: 'Expert in creating MCP tools that extend AI capabilities with custom functionality. MCP tools allow AI systems to access external data, perform specialized operations, and maintain context across conversations. Built the Dialog Manager MCP tool using Python, demonstrating understanding of MCP architecture, protocol implementation, and building tools that enhance AI assistant capabilities.'
+            },
+            {
+                title: 'Dialog Manager MCP Tool',
+                content: 'Created a sophisticated Dialog Manager MCP tool that enables saving, loading, and managing conversation contexts. This tool allows AI assistants to preserve important discussions, retrieve past conversations, tag and organize dialogue history, and maintain context across sessions. Implemented using Python with proper data serialization, file management, search functionality, and metadata handling. The tool demonstrates practical application of MCP protocol for conversation management and persistent storage.'
+            },
+            {
+                title: 'Integration & Automation',
+                content: 'Skilled in integrating AI capabilities into existing applications and workflows. Experience includes connecting AI agents to application backends, implementing intelligent automation features, managing API interactions with AI services, and designing user interfaces for AI-powered tools. Understanding of how to make AI practical and useful rather than just impressive, focusing on solving real problems and enhancing user experience.'
+            }
+        ],
+        experience: 'Advanced into AI development by building practical tools that solve real problems. The Dialog Manager MCP tool is actively used for conversation management and demonstrates ability to implement complex protocols. AI agents in Arplox assist game developers with intelligent suggestions and automation. This represents the cutting edge of my technical skills, combining programming expertise with understanding of AI systems, natural language processing, and intelligent automation. Continuously learning about AI capabilities, limitations, and best practices for building responsible, useful AI-powered applications.'
     },
     tennis: {
         icon: '★',
@@ -348,31 +371,43 @@ const projectDetails = {
         grade: '8th Grade',
         status: 'In Active Development',
         url: 'http://arplox.zyvior.com',
-        technologies: ['JavaScript', 'Node.js', 'Web Technologies', 'Game Dev Tools'],
-        overview: 'An ambitious game development platform currently under construction. Arplox aims to provide tools and resources for game developers to create, test, and share their games using modern web technologies.',
+        technologies: ['JavaScript', 'Node.js', 'AI Agents', 'Web Technologies', 'Game Dev Tools'],
+        overview: 'An ambitious AI-powered game development platform currently under construction. Arplox aims to provide intelligent tools and resources for game developers to create, test, and share their games using modern web technologies enhanced with AI assistance.',
         features: [
             {
+                title: 'AI Agent Integration',
+                description: 'Built intelligent AI agents that assist game developers with code generation, debugging suggestions, and game design recommendations. These agents understand developer intent through natural language and provide contextual, helpful assistance throughout the development process, making game creation more accessible and efficient.'
+            },
+            {
                 title: 'Game Development Tools',
-                description: 'Building a suite of tools that help developers create browser-based games more easily. This includes utilities for game logic, asset management, and testing frameworks.'
+                description: 'Building a suite of AI-enhanced tools that help developers create browser-based games more easily. This includes utilities for game logic, asset management, testing frameworks, and intelligent code completion.'
             },
             {
                 title: 'Web-Based Game Engine',
-                description: 'Developing a lightweight game engine that runs in the browser, allowing developers to create games using JavaScript with simplified APIs for common game development tasks.'
+                description: 'Developing a lightweight game engine that runs in the browser, allowing developers to create games using JavaScript with simplified APIs for common game development tasks and AI-powered optimization suggestions.'
             },
             {
-                title: 'Resource Library',
-                description: 'Creating a collection of reusable code snippets, templates, and examples that game developers can use as starting points or reference for their projects.'
+                title: 'Intelligent Resource Library',
+                description: 'Creating a collection of reusable code snippets, templates, and examples that game developers can access through natural language queries. The AI agent helps find relevant resources and suggests implementations based on developer needs.'
             },
             {
                 title: 'Developer Platform',
-                description: 'Building the infrastructure for developers to host, share, and showcase their games created with Arplox tools.'
+                description: 'Building the infrastructure for developers to host, share, and showcase their games created with Arplox tools, with AI-powered recommendations and community features.'
             }
         ],
-        challenges: 'Building a platform for other developers is complex - it needs to be powerful enough for advanced users while remaining accessible for beginners. Balancing features, performance, and ease of use is an ongoing challenge. Additionally, creating good documentation and examples requires significant effort.',
-        currentProgress: 'The core architecture is in place and basic game development tools are functional. Currently working on refining the developer experience, adding more features, and creating comprehensive documentation. The platform is live at arplox.zyvior.com for preview and testing.',
-        futureGoals: 'Planning to add collaborative features, a community showcase, more advanced game development tools, and tutorials for aspiring game developers. The goal is to make game development accessible to students and beginners while providing power tools for experienced developers.',
-        learning: 'This ongoing project is teaching me about platform design, API development, user experience, and building software for other developers. It\'s also improving my skills in project management, long-term planning, and iterative development.'
+        challenges: 'Building a platform for other developers is complex - it needs to be powerful enough for advanced users while remaining accessible for beginners. Adding AI capabilities introduces additional complexity around prompt engineering, context management, and ensuring AI suggestions are helpful and accurate. Balancing features, performance, and ease of use while integrating cutting-edge AI technology is an ongoing challenge.',
+        currentProgress: 'The core architecture is in place with AI agents integrated and functional. Basic game development tools are working alongside intelligent assistance features. Currently refining the AI agent behavior, expanding the knowledge base, and improving natural language understanding. The platform is live at arplox.zyvior.com for preview and testing of AI-enhanced features.',
+        futureGoals: 'Planning to enhance AI capabilities with better code understanding, add collaborative features where AI assists multiple developers simultaneously, create a community showcase, and develop tutorials for aspiring game developers. The goal is to make game development accessible through AI assistance while providing power tools for experienced developers. Future versions will include more sophisticated AI agents that can understand entire projects and provide architectural suggestions.',
+        learning: 'This ongoing project is teaching me about AI integration, prompt engineering, platform design, API development, and building software for other developers. Working with AI agents has deepened my understanding of natural language processing, context management, and how to make AI practical and useful rather than just impressive. It\'s also improving my skills in project management, long-term planning, and iterative development with cutting-edge technologies.'
     }
+};
+
+// Add MCP Dialog Manager as a highlighted project in experience
+const mcpToolHighlight = {
+    name: 'Dialog Manager MCP Tool',
+    description: 'Python-based MCP tool for AI conversation management',
+    link: 'https://github.com/Jasper-wu22/ConversationSaver_MCPTool'
+}
 };
 
 function openProjectModal(projectType) {
