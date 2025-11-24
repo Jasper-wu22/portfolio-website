@@ -263,11 +263,19 @@ function openSkillModal(skillType) {
     
     // Add image gallery if images exist
     if (skill.images && skill.images.length > 0) {
-        html += '<div class="modal-images">';
-        skill.images.forEach(img => {
-            html += `<img src="${img}" alt="${skill.title}" class="modal-image">`;
+        html += `
+            <div class="modal-section" style="margin-bottom: 2rem;">
+                <h4 style="margin-bottom: 1.5rem; color: var(--primary-color); font-size: 1.5rem;">Photo Gallery</h4>
+                <div class="modal-images">
+        `;
+        skill.images.forEach((img, index) => {
+            html += `
+                <div class="image-wrapper" style="position: relative; overflow: hidden; border-radius: 16px;">
+                    <img src="${img}" alt="${skill.title} - Photo ${index + 1}" class="modal-image" loading="lazy">
+                </div>
+            `;
         });
-        html += '</div>';
+        html += '</div></div>';
     }
     
     skill.sections.forEach(section => {
