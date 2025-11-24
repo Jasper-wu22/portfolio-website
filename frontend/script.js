@@ -99,33 +99,33 @@ contactCards.forEach(card => {
     });
 });
 
-// Project card click handlers
-document.addEventListener('DOMContentLoaded', function() {
-    const projectCards = document.querySelectorAll('.project-card[data-project]');
-    projectCards.forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            const projectType = this.getAttribute('data-project');
-            if (projectType && typeof openProjectModal === 'function') {
-                openProjectModal(projectType);
-            }
-        });
-    });
-    
-    const skillCards = document.querySelectorAll('.skill-card[onclick]');
-    skillCards.forEach(card => {
-        const onclickAttr = card.getAttribute('onclick');
-        if (onclickAttr) {
-            card.addEventListener('click', function(e) {
+// Project card click handlers - use direct event listeners
+const projectCards = document.querySelectorAll('.project-card[data-project]');
+projectCards.forEach(card => {
+    card.addEventListener('click', function(e) {
         e.preventDefault();
-                e.stopPropagation();
-                // Extract function call from onclick attribute
-                const match = onclickAttr.match(/openSkillModal\('(\w+)'\)/);
-                if (match && typeof openSkillModal === 'function') {
-                    openSkillModal(match[1]);
-                }
-            });
+        e.stopPropagation();
+        const projectType = this.getAttribute('data-project');
+        console.log('Project card clicked:', projectType);
+        if (projectType) {
+            openProjectModal(projectType);
+        }
+    });
+});
+
+// Skill card click handlers - use direct event listeners  
+const skillCards = document.querySelectorAll('.skill-card');
+skillCards.forEach(card => {
+    card.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        const onclickAttr = this.getAttribute('onclick');
+        if (onclickAttr) {
+            const match = onclickAttr.match(/openSkillModal\('(\w+)'\)/);
+            console.log('Skill card clicked:', match ? match[1] : 'no match');
+            if (match) {
+                openSkillModal(match[1]);
+            }
         }
     });
 });
@@ -438,7 +438,6 @@ const mcpToolHighlight = {
     name: 'Dialog Manager MCP Tool',
     description: 'Python-based MCP tool for AI conversation management',
     link: 'https://github.com/Jasper-wu22/ConversationSaver_MCPTool'
-}
 };
 
 function openProjectModal(projectType) {
