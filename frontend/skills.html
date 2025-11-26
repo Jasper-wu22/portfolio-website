@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills - Liuze Wu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html" style="text-decoration: none; color: inherit;">Liuze Wu</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('programming', event)">Programming Languages</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('web', event)">Web Development</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('ai', event)">AI & Advanced Tools</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('tennis', event)">Tennis Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills" style="padding-top: 100px;">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <p class="section-subtitle">Technologies and tools I work with</p>
+            <div class="skills-grid">
+                <div id="programming" class="skill-card" onclick="openSkillModal('programming')">
+                    <div class="skill-icon">{ }</div>
+                    <h3>Programming Languages</h3>
+                    <p>Building robust solutions with multiple technologies</p>
+                    <ul class="skill-list">
+                        <li>JavaScript (Node.js, Express, Frontend)</li>
+                        <li>Python (Development & Scripting)</li>
+                        <li>Java (Object-Oriented Programming)</li>
+                        <li>C# (Application Development)</li>
+                    </ul>
+                    <div class="click-hint">Click for details →</div>
+                </div>
+                <div id="web" class="skill-card" onclick="openSkillModal('web')">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>Web Development</h3>
+                    <p>Creating modern, full-stack applications</p>
+                    <ul class="skill-list">
+                        <li>Full-Stack Development</li>
+                        <li>RESTful API Design</li>
+                        <li>Responsive Web Design</li>
+                        <li>Database Management</li>
+                    </ul>
+                    <div class="click-hint">Click for details →</div>
+                </div>
+                <div id="ai" class="skill-card" onclick="openSkillModal('ai')">
+                    <div class="skill-icon">◆</div>
+                    <h3>AI & Advanced Tools</h3>
+                    <p>Building AI agents and MCP tools</p>
+                    <ul class="skill-list">
+                        <li>AI Agent Development (Arplox)</li>
+                        <li>MCP Tool Creation</li>
+                        <li>Dialog Manager MCP Tool</li>
+                        <li>Intelligent Automation</li>
+                    </ul>
+                    <div class="click-hint">Click for details →</div>
+                </div>
+                <div id="tennis" class="skill-card" onclick="openSkillModal('tennis')">
+                    <div class="skill-icon">★</div>
+                    <h3>Tennis Achievements</h3>
+                    <p>Yonex sponsored athlete & national champion</p>
+                    <ul class="skill-list">
+                        <li>Yonex Sponsored Athlete</li>
+                        <li>2024 National Open A1000 Singles Champion</li>
+                        <li>2024 National Open A1200 Doubles Champion</li>
+                        <li>2020 Shanghai Games Team Gold Medal</li>
+                        <li>2020 Shanghai Games Doubles Silver Medal</li>
+                        <li>UTR 8 Rating</li>
+                    </ul>
+                    <div class="click-hint">Click for details →</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skill Detail Modal -->
+    <div id="skillModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeSkillModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Liuze Wu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

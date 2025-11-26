@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Liuze Wu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html" style="text-decoration: none; color: inherit;">Liuze Wu</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('programming', event)">Programming Languages</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('web', event)">Web Development</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('ai', event)">AI & Advanced Tools</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('tennis', event)">Tennis Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects" style="padding-top: 100px;">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Software development journey from 4th grade to 8th grade</p>
+            <div class="projects-grid">
+                <div class="project-card" data-project="wukong">
+                    <div class="project-image">
+                        <div class="image-placeholder">Wukong Finance</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Wukong Salary Calculator <span style="font-size: 0.75em; color: #6b7280;">(8th Grade)</span></h3>
+                        <p>Financial management system for Wukong Education with automated salary calculations, payroll processing, and comprehensive financial tracking capabilities.</p>
+                        <div class="project-tags">
+                            <span class="tag">Finance</span>
+                            <span class="tag">Automation</span>
+                        </div>
+                        <div class="click-hint">Click for details →</div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="acc">
+                    <div class="project-image">
+                        <div class="image-placeholder">ACC Admin</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ACC Admin Assistant <span style="font-size: 0.75em; color: #6b7280;">(8th Grade)</span></h3>
+                        <p>Administrative automation tool designed to streamline workflow management and administrative tasks with intelligent assistance features.</p>
+                        <div class="project-tags">
+                            <span class="tag">Admin Tool</span>
+                            <span class="tag">Productivity</span>
+                        </div>
+                        <div class="click-hint">Click for details →</div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="spacewolf">
+                    <div class="project-image">
+                        <div class="image-placeholder">Space Game</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>dao3.fun Space Werewolf <span style="font-size: 0.75em; color: #6b7280;">(4th Grade)</span></h3>
+                        <p>Multiplayer space-themed social deduction game inspired by Among Us. My first major development project showcasing early programming skills and game design.</p>
+                        <div class="project-tags">
+                            <span class="tag">Game</span>
+                            <span class="tag">Multiplayer</span>
+                        </div>
+                        <div class="click-hint">Click for details →</div>
+                    </div>
+                </div>
+                <div class="project-card" data-project="arplox">
+                    <div class="project-image">
+                        <div class="image-placeholder">Arplox</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Arplox <span style="font-size: 0.8em; color: #8b5cf6;">(In Development)</span></h3>
+                        <p>A game development platform currently under construction. Creating tools and resources for game developers with modern web technologies and interactive features.</p>
+                        <div class="project-tags">
+                            <span class="tag">Game Dev</span>
+                            <span class="tag">Platform</span>
+                        </div>
+                        <div class="click-hint">Click for details →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProjectModal()">&times;</span>
+            <div id="projectModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Liuze Wu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

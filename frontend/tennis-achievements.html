@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Achievements - Liuze Wu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand"><a href="index.html" style="text-decoration: none; color: inherit;">Liuze Wu</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <ul class="dropdown-menu">
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('programming', event)">Programming Languages</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('web', event)">Web Development</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('ai', event)">AI & Advanced Tools</a></li>
+                        <li class="dropdown-item"><a href="skills.html" class="dropdown-link" onclick="openSkillFromDropdown('tennis', event)">Tennis Achievements</a></li>
+                    </ul>
+                </li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tennis Achievements Section -->
+    <section id="tennis-achievements" class="tennis-achievements" style="padding-top: 100px;">
+        <div class="container">
+            <h2 class="section-title">Tennis Achievements</h2>
+            <p class="section-subtitle">Yonex Sponsored Athlete & National Champion</p>
+            
+            <!-- Achievement Highlights -->
+            <div class="achievement-highlights">
+                <div class="achievement-badge" onclick="showAchievementExplanation('yonex')">
+                    <div class="badge-icon">⭐</div>
+                    <h3>Yonex Sponsored</h3>
+                    <p>Professional Athlete</p>
+                    <div class="click-info">Click for details</div>
+                </div>
+                <div class="achievement-badge" onclick="showAchievementExplanation('a1000')">
+                    <div class="badge-icon">🏆</div>
+                    <h3>2024 A1000 Singles Champion</h3>
+                    <p>Baoshan National Tennis Open</p>
+                    <div class="click-info">Click for details</div>
+                </div>
+                <div class="achievement-badge" onclick="showAchievementExplanation('a1200')">
+                    <div class="badge-icon">🥇</div>
+                    <h3>2024 A1200 Doubles Champion</h3>
+                    <p>Jiaxing National Tennis Open</p>
+                    <div class="click-info">Click for details</div>
+                </div>
+                <div class="achievement-badge" onclick="showAchievementExplanation('gold')">
+                    <div class="badge-icon">🥇</div>
+                    <h3>2020 Shanghai Games Team Gold</h3>
+                    <p>Team Competition</p>
+                    <div class="click-info">Click for details</div>
+                </div>
+                <div class="achievement-badge" onclick="showAchievementExplanation('silver')">
+                    <div class="badge-icon">🥈</div>
+                    <h3>2020 Shanghai Games Doubles Silver</h3>
+                    <p>Doubles Competition</p>
+                    <div class="click-info">Click for details</div>
+                </div>
+                <div class="achievement-badge" onclick="showAchievementExplanation('utr')">
+                    <div class="badge-icon">🎾</div>
+                    <h3>UTR 8 Rating</h3>
+                    <p>Competitive Level</p>
+                    <div class="click-info">Click for details</div>
+                </div>
+            </div>
+
+            <!-- Professional Photo Gallery -->
+            <div class="tennis-gallery">
+                <div class="gallery-header">
+                    <h3>Championship Moments</h3>
+                    <p>Memorable victories and tournament highlights</p>
+                </div>
+                <div class="tennis-photo-grid">
+                    <div class="tennis-photo-item featured">
+                        <img src="images/397c664f624995fe3b81c21c42024842.jpg" alt="Tennis Championship - Singles Victory">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">2024 A1000 Singles Champion</div>
+                        </div>
+                    </div>
+                    <div class="tennis-photo-item">
+                        <img src="images/3d9cb6ee27d199c1b5591708059dd161.jpg" alt="Tennis Championship">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">2024 A1200 Doubles Champion</div>
+                        </div>
+                    </div>
+                    <div class="tennis-photo-item">
+                        <img src="images/65793e3f214f0d43cf3ac1308b7c59b4.jpg" alt="Tennis Championship">
+                        <div class="photo-overlay">
+                            <div class="photo-caption">Championship Victory</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Achievements Info -->
+            <div class="achievements-info">
+                <div class="info-card">
+                    <h4>2020 Shanghai 10th Games</h4>
+                    <p>Team Gold Medal & Doubles Silver Medal</p>
+                </div>
+                <div class="info-card">
+                    <h4>Training & Development</h4>
+                    <p>Continuous improvement through dedicated practice and competitive play</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievement Explanation Modal -->
+    <div id="achievementModal" class="modal achievement-modal">
+        <div class="modal-content achievement-modal-content">
+            <span class="close-modal" onclick="closeAchievementModal()">&times;</span>
+            <div id="achievementModalBody"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Liuze Wu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

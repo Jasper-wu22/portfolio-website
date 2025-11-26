@@ -64,6 +64,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-link {
@@ -91,6 +92,79 @@ body {
 
 .nav-link:hover::after {
     width: 100%;
+}
+
+/* Dropdown Menu */
+.nav-item-dropdown {
+    position: relative;
+}
+
+.nav-item-dropdown > .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-item-dropdown > .nav-link::after {
+    content: '▼';
+    font-size: 0.7rem;
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    transition: transform 0.3s ease;
+}
+
+.nav-item-dropdown:hover > .nav-link::after {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--white);
+    min-width: 220px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    list-style: none;
+    z-index: 1000;
+    border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    padding: 0;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.dropdown-link:hover {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    padding-left: 2rem;
+}
+
+.dropdown-link::after {
+    display: none;
 }
 
 .hamburger {
@@ -413,6 +487,234 @@ body {
     font-weight: bold;
 }
 
+/* Tennis Achievements Section */
+.tennis-achievements {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.tennis-achievements::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%236366f1" fill-opacity="0.03"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.tennis-achievements .container {
+    position: relative;
+    z-index: 1;
+}
+
+.achievement-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0 4rem;
+}
+
+.achievement-badge {
+    background: var(--white);
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.achievement-badge::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.achievement-badge:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(99, 102, 241, 0.2);
+    border-color: var(--primary-color);
+}
+
+.achievement-badge:hover::before {
+    transform: scaleX(1);
+}
+
+.badge-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.achievement-badge h3 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.achievement-badge p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.click-info {
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.achievement-badge:hover .click-info {
+    opacity: 1;
+}
+
+.tennis-gallery {
+    margin: 4rem 0;
+}
+
+.gallery-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.gallery-header h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.gallery-header p {
+    color: var(--text-light);
+    font-size: 1.125rem;
+}
+
+.tennis-photo-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    grid-auto-rows: 250px;
+}
+
+.tennis-photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--white);
+}
+
+.tennis-photo-item.featured {
+    grid-column: span 7;
+    grid-row: span 2;
+}
+
+.tennis-photo-item:nth-child(2) {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.tennis-photo-item:nth-child(3) {
+    grid-column: span 5;
+    grid-row: span 1;
+}
+
+.tennis-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tennis-photo-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.3);
+    z-index: 10;
+}
+
+.tennis-photo-item:hover img {
+    transform: scale(1.1);
+}
+
+.photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 2rem 1.5rem 1.5rem;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tennis-photo-item:hover .photo-overlay {
+    transform: translateY(0);
+}
+
+.photo-caption {
+    color: var(--white);
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.achievements-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.info-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+}
+
+.info-card h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.75rem;
+}
+
+.info-card p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin: 0;
+}
+
 /* Projects Section */
 .projects {
     padding: 5rem 0;
@@ -654,6 +956,31 @@ body {
     display: inline-block;
 }
 
+.section-image-container {
+    margin: 1.5rem 0 1.5rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    background: var(--bg-light);
+    padding: 0.5rem;
+}
+
+.section-image-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.2);
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 12px;
+    display: block;
+    background: var(--white);
+}
+
 .modal-section p, .modal-section li {
     color: var(--text-light);
     line-height: 2;
@@ -857,6 +1184,105 @@ body {
     }
 }
 
+/* Achievement Explanation Modal */
+.achievement-modal-content {
+    max-width: 600px;
+    padding: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--white);
+}
+
+.achievement-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 2rem 2.5rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.achievement-modal-icon {
+    font-size: 3.5rem;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+    line-height: 1;
+}
+
+.achievement-modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin: 0;
+    flex: 1;
+    line-height: 1.3;
+}
+
+.achievement-modal-body {
+    padding: 2rem 2.5rem 2.5rem;
+}
+
+.achievement-modal-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.achievement-modal-image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    aspect-ratio: 1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.achievement-modal-image-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.achievement-modal-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.achievement-modal-body p {
+    color: var(--text-light);
+    line-height: 1.9;
+    font-size: 1.05rem;
+    margin: 0;
+}
+
+.achievement-modal .close-modal {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    color: var(--text-light);
+    font-size: 2rem;
+    font-weight: 300;
+    cursor: pointer;
+    transition: var(--transition);
+    line-height: 1;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.9);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.achievement-modal .close-modal:hover {
+    color: var(--text-dark);
+    background: var(--white);
+    transform: rotate(90deg) scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 /* Responsive Design */
 @media (max-width: 968px) {
     .hamburger {
@@ -880,6 +1306,22 @@ body {
         left: 0;
     }
 
+    .nav-item-dropdown .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        margin-top: 0;
+        padding: 0.5rem 0 0.5rem 2rem;
+        background: var(--bg-light);
+    }
+
+    .nav-item-dropdown:hover .dropdown-menu {
+        transform: none;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
@@ -895,6 +1337,64 @@ body {
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 968px) {
+    .tennis-photo-grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .tennis-photo-item.featured {
+        grid-column: span 6;
+        grid-row: span 2;
+    }
+
+    .tennis-photo-item:not(.featured) {
+        grid-column: span 3;
+        grid-row: span 2;
+    }
+
+    .achievement-highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .achievement-modal-content {
+        max-width: 90%;
+    }
+
+    .achievement-modal-header {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .achievement-modal-icon {
+        font-size: 3rem;
+    }
+
+    .achievement-modal-title {
+        font-size: 1.25rem;
+    }
+
+    .achievement-modal-body {
+        padding: 1.5rem;
+    }
+
+    .achievement-modal-images {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .achievement-modal-image-item {
+        aspect-ratio: 16/9;
+    }
+
+    .achievement-modal-body p {
+        font-size: 1rem;
     }
 }
 
@@ -917,6 +1417,26 @@ body {
 
     .projects-grid,
     .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tennis-photo-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .tennis-photo-item.featured,
+    .tennis-photo-item:not(.featured) {
+        grid-column: span 1;
+        grid-row: span 1;
+        height: 300px;
+    }
+
+    .achievement-highlights {
+        grid-template-columns: 1fr;
+    }
+
+    .achievements-info {
         grid-template-columns: 1fr;
     }
 }
